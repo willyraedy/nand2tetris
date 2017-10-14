@@ -1,0 +1,11 @@
+
+
+
+
+
+   Or8Way(a=out[0..7], b[0..7]=false, out=half1);
+   Or8Way(a=out[8..15], b[0..7]=false, out=half2);
+   Or(a=half1, b=half2, out=result);
+   Not(in=result, out=zr);
+
+   And(a=out[15], b=true, out=ng);
