@@ -15,4 +15,37 @@ CHIP Register {
 
     PARTS:
     // Put your code here:
+    Mux(a=loop0, b=in[0], sel=load, out=temp0);
+    DFF(in=temp0, out=loop0, out=out[0]);
+    Mux(a=loop1, b=in[1], sel=load, out=temp1);
+    DFF(in=temp1, out=loop1, out=out[1]);
+    Mux(a=loop2, b=in[2], sel=load, out=temp2);
+    DFF(in=temp2, out=loop2, out=out[2]);
+    Mux(a=loop3, b=in[3], sel=load, out=temp3);
+    DFF(in=temp3, out=loop3, out=out[3]);
+    Mux(a=loop4, b=in[4], sel=load, out=temp4);
+    DFF(in=temp4, out=loop4, out=out[4]);
+    Mux(a=loop5, b=in[5], sel=load, out=temp5);
+    DFF(in=temp5, out=loop5, out=out[5]);
+    Mux(a=loop6, b=in[6], sel=load, out=temp6);
+    DFF(in=temp6, out=loop6, out=out[6]);
+    Mux(a=loop7, b=in[7], sel=load, out=temp7);
+    DFF(in=temp7, out=loop7, out=out[7]);
+    Mux(a=loop8, b=in[8], sel=load, out=temp8);
+    DFF(in=temp8, out=loop8, out=out[8]);
+    Mux(a=loop9, b=in[9], sel=load, out=temp9);
+    DFF(in=temp9, out=loop9, out=out[9]);
+    Mux(a=loop10, b=in[10], sel=load, out=temp10);
+    DFF(in=temp10, out=loop10, out=out[10]);
+    Mux(a=loop11, b=in[11], sel=load, out=temp11);
+    DFF(in=temp11, out=loop11, out=out[11]);
+    Mux(a=loop12, b=in[12], sel=load, out=temp12);
+    DFF(in=temp12, out=loop12, out=out[12]);
+    Mux(a=loop13, b=in[13], sel=load, out=temp13);
+
+    DFF(in=temp13, out=loop13, out=out[13]);
+    Mux(a=loop14, b=in[14], sel=load, out=temp14);
+    DFF(in=temp14, out=loop14, out=out[14]);
+    Mux(a=loop15, b=in[15], sel=load, out=temp15);
+    DFF(in=temp15, out=loop15, out=out[15]);
 }
