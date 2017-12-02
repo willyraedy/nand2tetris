@@ -3,9 +3,15 @@ class Parser {
     this.nextLine = 0;
     this.currentCommand = null;
     this.fileText = fileText.split('\n')
-      .map(cmd => cmd.trim())
+      .map(cmd => { // remove in-line comments and white space
+        const commentIndx = cmd.indexOf('//');
+        if (commentIndx > -1) {
+          return cmd.slice(0, commentIndx).trim();
+        }
+        return cmd.trim();
+      })
       .filter(cmd => cmd.slice(0, 2) !== '//' && cmd.length);
-    // Doesn't trim comments that start mid-line
+      // remove empty lines and whole line comments
   }
 
   hasMoreCommands() {
